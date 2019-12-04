@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lart_read_more_style
+    - paragraphs.paragraphs_type.lart_related_content
+  module:
+    - options
+id: paragraph.lart_related_content.field_lart_read_more_style
+field_name: field_lart_read_more_style
+entity_type: paragraph
+bundle: lart_related_content
+label: '"Read more" button style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: btn-secondary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

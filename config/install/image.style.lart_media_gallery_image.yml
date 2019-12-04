@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: lart_media_gallery_image
+label: 'Media gallery image thumbnail (480×360)'
+effects:
+  0e44ea5a-df87-4796-b26e-d4fb94b5a583:
+    uuid: 0e44ea5a-df87-4796-b26e-d4fb94b5a583
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 360
+      anchor: center-center

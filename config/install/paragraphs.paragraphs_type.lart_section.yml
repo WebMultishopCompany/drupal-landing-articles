@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: lart_section
+label: Section
+icon_uuid: null
+description: 'Landing article section'
+behavior_plugins: {  }

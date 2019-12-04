@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_gallery_image
+label: 'Media gallery image'
+targetEntityType: media
+cache: true

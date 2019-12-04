@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.lart_cover_big
+label: 'Landing article big cover'
+targetEntityType: media
+cache: true

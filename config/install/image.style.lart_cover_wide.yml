@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: lart_cover_wide
+label: 'Landing article wide cover (1140×641)'
+effects:
+  1778262a-3470-4a84-b480-a36c3a6086ec:
+    uuid: 1778262a-3470-4a84-b480-a36c3a6086ec
+    id: image_scale
+    weight: 1
+    data:
+      width: 1140
+      height: null
+      upscale: false

@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.lart_related_content_grid
+    - field.field.paragraph.lart_related_content.field_lart_read_more_label
+    - field.field.paragraph.lart_related_content.field_lart_read_more_style
+    - field.field.paragraph.lart_related_content.field_lart_related_node
+    - field.field.paragraph.lart_related_content.field_lart_teaser_override
+    - field.field.paragraph.lart_related_content.field_lart_teaser_show
+    - paragraphs.paragraphs_type.lart_related_content
+  module:
+    - options
+    - text
+id: paragraph.lart_related_content.lart_related_content_grid
+targetEntityType: paragraph
+bundle: lart_related_content
+mode: lart_related_content_grid
+content:
+  field_lart_read_more_label:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_lart_read_more_style:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_lart_related_node:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_lart_teaser_override:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_lart_teaser_show:
+    type: boolean
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+hidden: {  }

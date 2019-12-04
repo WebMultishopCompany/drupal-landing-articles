@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: lart_media_gallery_image_fhd
+label: 'Media gallery image in full HD (1920×1080)'
+effects:
+  c9be00b6-5c7f-4e86-8d9e-4385daf2daf3:
+    uuid: c9be00b6-5c7f-4e86-8d9e-4385daf2daf3
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: 1080
+      upscale: false

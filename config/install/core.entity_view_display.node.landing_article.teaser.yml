@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_article.field_lart_about
+    - field.field.node.landing_article.field_lart_availability
+    - field.field.node.landing_article.field_lart_description
+    - field.field.node.landing_article.field_lart_flag
+    - field.field.node.landing_article.field_lart_image
+    - field.field.node.landing_article.field_lart_keywords
+    - field.field.node.landing_article.field_lart_media_gallery
+    - field.field.node.landing_article.field_lart_price
+    - field.field.node.landing_article.field_lart_price_max
+    - field.field.node.landing_article.field_lart_price_old
+    - field.field.node.landing_article.field_lart_price_type
+    - field.field.node.landing_article.field_lart_published
+    - field.field.node.landing_article.field_lart_rel_content_heading
+    - field.field.node.landing_article.field_lart_rel_content_style
+    - field.field.node.landing_article.field_lart_related_content
+    - field.field.node.landing_article.field_lart_sections
+    - field.field.node.landing_article.field_lart_special_offer
+    - field.field.node.landing_article.field_lart_text
+    - field.field.node.landing_article.field_lart_topics
+    - node.type.landing_article
+  module:
+    - text
+    - user
+id: node.landing_article.teaser
+targetEntityType: node
+bundle: landing_article
+mode: teaser
+content:
+  field_lart_about:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_lart_description:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_lart_image:
+    type: entity_reference_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_lart_availability: true
+  field_lart_flag: true
+  field_lart_keywords: true
+  field_lart_media_gallery: true
+  field_lart_price: true
+  field_lart_price_max: true
+  field_lart_price_old: true
+  field_lart_price_type: true
+  field_lart_published: true
+  field_lart_rel_content_heading: true
+  field_lart_rel_content_style: true
+  field_lart_related_content: true
+  field_lart_sections: true
+  field_lart_special_offer: true
+  field_lart_text: true
+  field_lart_topics: true
+  langcode: true

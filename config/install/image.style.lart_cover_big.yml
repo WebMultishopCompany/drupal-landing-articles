@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: lart_cover_big
+label: 'Landing article big cover (933×700)'
+effects:
+  3f9531f2-4e6b-4830-ac3a-6017c1fa15e8:
+    uuid: 3f9531f2-4e6b-4830-ac3a-6017c1fa15e8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 933
+      height: 700
+      anchor: center-center

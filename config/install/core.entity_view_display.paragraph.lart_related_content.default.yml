@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lart_related_content.field_lart_read_more_label
+    - field.field.paragraph.lart_related_content.field_lart_read_more_style
+    - field.field.paragraph.lart_related_content.field_lart_related_node
+    - field.field.paragraph.lart_related_content.field_lart_teaser_override
+    - field.field.paragraph.lart_related_content.field_lart_teaser_show
+    - paragraphs.paragraphs_type.lart_related_content
+id: paragraph.lart_related_content.default
+targetEntityType: paragraph
+bundle: lart_related_content
+mode: default
+content:
+  field_lart_related_node:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_lart_read_more_label: true
+  field_lart_read_more_style: true
+  field_lart_teaser_override: true
+  field_lart_teaser_show: true

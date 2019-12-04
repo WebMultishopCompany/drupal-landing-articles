@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.lart_cover_medium
+label: 'Landing article medium cover'
+targetEntityType: media
+cache: true

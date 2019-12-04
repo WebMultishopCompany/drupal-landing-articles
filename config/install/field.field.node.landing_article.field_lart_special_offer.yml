@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lart_special_offer
+    - node.type.landing_article
+id: node.landing_article.field_lart_special_offer
+field_name: field_lart_special_offer
+entity_type: node
+bundle: landing_article
+label: 'Special offer'
+description: 'By marking this article as special offer, its appearance will be emphasized in certain blocks.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

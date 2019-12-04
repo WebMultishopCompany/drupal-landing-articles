@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: lart_cover_small
+label: 'Landing article small cover (560×420)'
+effects:
+  75b40d02-4705-4099-8dac-f0519ff9b951:
+    uuid: 75b40d02-4705-4099-8dac-f0519ff9b951
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 420
+      anchor: center-center

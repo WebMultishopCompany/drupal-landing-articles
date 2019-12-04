@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: lart_related_content
+label: 'Related content'
+icon_uuid: null
+description: 'Landing article related content'
+behavior_plugins: {  }

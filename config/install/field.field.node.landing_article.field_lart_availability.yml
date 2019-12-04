@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lart_availability
+    - node.type.landing_article
+  module:
+    - smart_date
+id: node.landing_article.field_lart_availability
+field_name: field_lart_availability
+entity_type: node
+bundle: landing_article
+label: Availability
+description: 'Date the content expires and is no longer useful or available. '
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: ''
+    default_date: ''
+    default_duration_increments: "1440|1 day\r\n10080|1 week\r\n40320|4 weeks\r\n524160|52 weeks\r\ncustom"
+    default_duration: 0
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

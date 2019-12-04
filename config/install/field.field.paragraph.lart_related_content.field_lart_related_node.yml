@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lart_related_node
+    - node.type.landing_article
+    - paragraphs.paragraphs_type.lart_related_content
+id: paragraph.lart_related_content.field_lart_related_node
+field_name: field_lart_related_node
+entity_type: paragraph
+bundle: lart_related_content
+label: Target
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      landing_article: landing_article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,27 @@
+name: 'Landing articles'
+description: 'Provides Landing article content type and related configuration. An article that is often a landing page for new visitors, such as a product or service promotional article.'
+type: module
+core: 8.x
+dependencies:
+  - colorbox
+  - content_translation
+  - entity_reference_revisions
+  - field
+  - field_group
+  - file
+  - image
+  - language
+  - media
+  - media_library
+  - menu_ui
+  - node
+  - options
+  - paragraphs
+  - path
+  - smart_date
+  - taxonomy
+  - text
+  - user
+  - views
+core_incompatible: false
+version: 8.x-1.0

@@ -1,0 +1,7 @@
+langcode: und
+status: true
+dependencies: {  }
+name: Keywords
+vid: lart_keywords
+description: 'Keywords or tags used to describe a content.'
+weight: 0

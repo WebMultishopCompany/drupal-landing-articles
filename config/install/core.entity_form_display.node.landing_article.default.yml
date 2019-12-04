@@ -1,0 +1,388 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_article.field_lart_about
+    - field.field.node.landing_article.field_lart_availability
+    - field.field.node.landing_article.field_lart_description
+    - field.field.node.landing_article.field_lart_flag
+    - field.field.node.landing_article.field_lart_image
+    - field.field.node.landing_article.field_lart_keywords
+    - field.field.node.landing_article.field_lart_media_gallery
+    - field.field.node.landing_article.field_lart_price
+    - field.field.node.landing_article.field_lart_price_max
+    - field.field.node.landing_article.field_lart_price_old
+    - field.field.node.landing_article.field_lart_price_type
+    - field.field.node.landing_article.field_lart_published
+    - field.field.node.landing_article.field_lart_rel_content_heading
+    - field.field.node.landing_article.field_lart_rel_content_style
+    - field.field.node.landing_article.field_lart_related_content
+    - field.field.node.landing_article.field_lart_sections
+    - field.field.node.landing_article.field_lart_special_offer
+    - field.field.node.landing_article.field_lart_text
+    - field.field.node.landing_article.field_lart_topics
+    - node.type.landing_article
+  module:
+    - field_group
+    - media_library
+    - paragraphs
+    - path
+    - smart_date
+    - text
+third_party_settings:
+  field_group:
+    group_sections:
+      children:
+        - field_lart_sections
+      parent_name: group_content
+      weight: 23
+      format_type: tab
+      format_settings:
+        label: 'Additional chapters (sections)'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Additional chapters (sections)'
+    group_content:
+      children:
+        - group_teaser
+        - group_text
+        - group_sections
+        - group_gallery
+        - group_related_content
+        - group_publishing
+        - group_additional_information
+        - group_offer_information
+      parent_name: ''
+      weight: 7
+      format_type: tabs
+      format_settings:
+        label: Content
+        direction: vertical
+        id: ''
+        classes: ''
+      label: Content
+    group_text:
+      children:
+        - field_lart_text
+      parent_name: group_content
+      weight: 22
+      format_type: tab
+      format_settings:
+        label: 'Main article content (Body)'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Main article content (Body)'
+    group_related_content:
+      children:
+        - field_lart_rel_content_heading
+        - field_lart_rel_content_style
+        - field_lart_related_content
+      parent_name: group_content
+      weight: 25
+      format_type: tab
+      format_settings:
+        label: 'Related content'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Related content'
+    group_gallery:
+      children:
+        - field_lart_media_gallery
+      parent_name: group_content
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Gallery
+    group_publishing:
+      children:
+        - field_lart_published
+        - field_lart_topics
+      parent_name: group_content
+      weight: 26
+      format_type: tab
+      format_settings:
+        label: 'Advanced publishing'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Advanced publishing'
+    group_additional_information:
+      children:
+        - field_lart_flag
+        - field_lart_keywords
+      parent_name: group_content
+      weight: 27
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Additional information'
+    group_teaser:
+      children:
+        - field_lart_image
+        - field_lart_description
+        - field_lart_about
+      parent_name: group_content
+      weight: 21
+      format_type: tab
+      format_settings:
+        label: Teaser/cover
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Teaser/cover
+    group_offer_information:
+      children:
+        - field_lart_availability
+        - field_lart_price
+        - field_lart_price_max
+        - field_lart_price_type
+        - field_lart_special_offer
+        - field_lart_price_old
+      parent_name: group_content
+      weight: 29
+      format_type: tab
+      format_settings:
+        label: 'Commercial attributes'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Commercial attributes'
+id: node.landing_article.default
+targetEntityType: node
+bundle: landing_article
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lart_about:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_lart_availability:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: smartdate_default
+    region: content
+  field_lart_description:
+    weight: 12
+    settings:
+      size: 200
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_lart_flag:
+    weight: 10
+    settings:
+      size: 200
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_lart_image:
+    type: media_library_widget
+    weight: 11
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_lart_keywords:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_lart_media_gallery:
+    type: media_library_widget
+    weight: 11
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_lart_price:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_lart_price_max:
+    weight: 35
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_lart_price_old:
+    weight: 38
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_lart_price_type:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lart_published:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: smartdate_default
+    region: content
+  field_lart_rel_content_heading:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lart_rel_content_style:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_lart_related_content:
+    type: entity_reference_paragraphs
+    weight: 15
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_lart_sections:
+    type: entity_reference_paragraphs
+    weight: 16
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_lart_special_offer:
+    weight: 37
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_lart_text:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_lart_topics:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  langcode:
+    type: language_select
+    weight: 8
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

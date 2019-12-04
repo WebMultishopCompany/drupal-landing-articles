@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lart_teaser_override
+    - paragraphs.paragraphs_type.lart_related_content
+  module:
+    - text
+id: paragraph.lart_related_content.field_lart_teaser_override
+field_name: field_lart_teaser_override
+entity_type: paragraph
+bundle: lart_related_content
+label: 'Teaser content override'
+description: 'By default, related content teaser description and about text will be displayed. If you write anything here, override text will be used instead.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

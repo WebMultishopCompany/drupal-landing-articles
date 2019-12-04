@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.lart_sections_grid
+    - field.field.paragraph.lart_section.field_lart_section_heading
+    - field.field.paragraph.lart_section.field_lart_section_text
+    - paragraphs.paragraphs_type.lart_section
+  module:
+    - text
+id: paragraph.lart_section.lart_sections_grid
+targetEntityType: paragraph
+bundle: lart_section
+mode: lart_sections_grid
+content:
+  field_lart_section_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_lart_section_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

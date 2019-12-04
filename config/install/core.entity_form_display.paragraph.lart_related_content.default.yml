@@ -1,0 +1,85 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lart_related_content.field_lart_read_more_label
+    - field.field.paragraph.lart_related_content.field_lart_read_more_style
+    - field.field.paragraph.lart_related_content.field_lart_related_node
+    - field.field.paragraph.lart_related_content.field_lart_teaser_override
+    - field.field.paragraph.lart_related_content.field_lart_teaser_show
+    - paragraphs.paragraphs_type.lart_related_content
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_separator:
+      children:
+        - field_lart_read_more_label
+        - field_lart_read_more_style
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: Separator
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: 'style="margin-top: 30px"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: card
+        required_fields: false
+      label: Separator
+id: paragraph.lart_related_content.default
+targetEntityType: paragraph
+bundle: lart_related_content
+mode: default
+content:
+  field_lart_read_more_label:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lart_read_more_style:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_lart_related_node:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_lart_teaser_override:
+    weight: 2
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_lart_teaser_show:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

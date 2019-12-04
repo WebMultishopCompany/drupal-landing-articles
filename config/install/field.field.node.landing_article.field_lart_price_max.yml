@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lart_price_max
+    - node.type.landing_article
+id: node.landing_article.field_lart_price_max
+field_name: field_lart_price_max
+entity_type: node
+bundle: landing_article
+label: 'Maximum price'
+description: 'Use, when you want to display current price range. Result will be like "1 - 2 €", where "1" will be value of "Price (current)" and "2" will be "Maximum price".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

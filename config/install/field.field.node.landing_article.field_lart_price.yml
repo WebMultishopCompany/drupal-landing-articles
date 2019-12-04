@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lart_price
+    - node.type.landing_article
+id: node.landing_article.field_lart_price
+field_name: field_lart_price
+entity_type: node
+bundle: landing_article
+label: 'Price (current)'
+description: 'Price of the product described in the article.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

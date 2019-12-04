@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: lart_cover_narrow
+label: 'Landing article narrow cover (487×365)'
+effects:
+  52814d18-090f-4e8e-bf88-d89163713b0f:
+    uuid: 52814d18-090f-4e8e-bf88-d89163713b0f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 487
+      height: 365
+      anchor: center-center

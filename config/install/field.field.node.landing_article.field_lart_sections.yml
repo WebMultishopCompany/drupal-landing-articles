@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lart_sections
+    - node.type.landing_article
+    - paragraphs.paragraphs_type.lart_section
+  module:
+    - entity_reference_revisions
+id: node.landing_article.field_lart_sections
+field_name: field_lart_sections
+entity_type: node
+bundle: landing_article
+label: Sections
+description: 'Separate widget that will provide navigation (tabs) between sections and text from currently from selected section'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      lart_section: lart_section
+    target_bundles_drag_drop:
+      lart_section:
+        enabled: true
+        weight: 2
+      lart_related_content:
+        weight: 3
+        enabled: false
+field_type: entity_reference_revisions

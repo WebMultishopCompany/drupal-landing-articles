@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lart_rel_content_heading
+    - node.type.landing_article
+id: node.landing_article.field_lart_rel_content_heading
+field_name: field_lart_rel_content_heading
+entity_type: node
+bundle: landing_article
+label: Heading
+description: 'Text that describes in what way chosen content is related to this article.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

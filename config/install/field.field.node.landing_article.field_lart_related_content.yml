@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lart_related_content
+    - node.type.landing_article
+    - paragraphs.paragraphs_type.lart_related_content
+  module:
+    - entity_reference_revisions
+id: node.landing_article.field_lart_related_content
+field_name: field_lart_related_content
+entity_type: node
+bundle: landing_article
+label: 'Related content'
+description: 'Separate widget that will display teser of each linked content together with "Read more" button'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      lart_related_content: lart_related_content
+    target_bundles_drag_drop:
+      lart_related_content:
+        enabled: true
+        weight: 3
+      lart_section:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

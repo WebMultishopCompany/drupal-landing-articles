@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.lart_cover_small
+    - field.field.media.image.field_keyword
+    - field.field.media.image.field_media_image
+    - image.style.lart_cover_small
+    - media.type.image
+  module:
+    - image
+id: media.image.lart_cover_small
+targetEntityType: media
+bundle: image
+mode: lart_cover_small
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: lart_cover_small
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  field_keyword: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

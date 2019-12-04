@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lart_teaser_show
+    - paragraphs.paragraphs_type.lart_related_content
+id: paragraph.lart_related_content.field_lart_teaser_show
+field_name: field_lart_teaser_show
+entity_type: paragraph
+bundle: lart_related_content
+label: 'Show content'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: lart_cover_medium
+label: 'Landing article medium cover (740×555)'
+effects:
+  dba77684-d0a8-4f19-99b7-7c1198dffd21:
+    uuid: dba77684-d0a8-4f19-99b7-7c1198dffd21
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 740
+      height: 555
+      anchor: center-center
